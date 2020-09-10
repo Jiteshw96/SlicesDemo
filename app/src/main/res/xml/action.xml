@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<actions>
+
+    <action intentName="actions.intent.GET_THING">
+
+        <fulfillment
+            fulfillmentMode="actions.fulfillment.SLICE"
+            urlTemplate="content://com.atos.slicesdemo/{?name}">
+
+            <parameter-mapping
+                urlParameter="name"
+                intentParameter="thing.name"
+                required="true"/>
+        </fulfillment>
+
+        <fulfillment urlTemplate="content://com.atos.slicesdemo/" />
+
+    </action>
+
+</actions>
+
