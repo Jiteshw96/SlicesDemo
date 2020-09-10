@@ -1,4 +1,4 @@
-package com.example.slicesdemo;
+package com.atos.slicesdemo;
 
 import android.app.slice.Slice;
 import android.bluetooth.BluetoothAdapter;
@@ -10,13 +10,13 @@ import android.net.wifi.WifiManager;
 
 public class MyBroadCastReceiver extends BroadcastReceiver {
 
-    public static final String TOGGLE_WIFI = "com.example.slicesdemo.TOGGLE_WIFI";
+    public static final String TOGGLE_WIFI = "com.atos.slicesdemo.TOGGLE_WIFI";
     public static final String EXTRA_VALUE_KEY = "extra_value";
-    public static final Uri wifiToggleUri = Uri.parse("content://com.example.slicesdemo/wifi");
+    public static final Uri wifiToggleUri = Uri.parse("content://com.atos.slicesdemo/wifi");
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        boolean wifiState =  false;
+        boolean wifiState;
         if(intent.getAction().equals(TOGGLE_WIFI)){
 
             WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);

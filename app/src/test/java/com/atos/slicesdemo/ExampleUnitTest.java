@@ -1,4 +1,4 @@
-package com.example.slicesdemo;
+package com.atos.slicesdemo;
 
 import org.junit.Test;
 

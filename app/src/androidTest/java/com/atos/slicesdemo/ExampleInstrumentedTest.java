@@ -1,4 +1,4 @@
-package com.example.slicesdemo;
+package com.atos.slicesdemo;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.slicesdemo", appContext.getPackageName());
+        assertEquals("com.atos.slicesdemo", appContext.getPackageName());
     }
 }
