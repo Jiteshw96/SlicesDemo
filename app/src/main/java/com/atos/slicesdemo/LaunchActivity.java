@@ -16,12 +16,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.sql.Struct;
 import java.util.List;
 
 public class LaunchActivity extends AppCompatActivity {
 
-    private static final String SLICE_AUTHORITY = "com.atos.slicesdemo";
+    private static final String SLICE_AUTHORITY = "com.example.slicesdemo";
     Button basicLaunchBtn, toggleLaunchButton, gridLaunchButton;
     String sliceViewerPackageName;
 
@@ -97,7 +96,7 @@ public class LaunchActivity extends AppCompatActivity {
     private void launchSliceViewerApp() {
 
         if (isSliceViewerInstalled() && isSliceViewerApplicationEnabled()) {
-            String uri = "slice-content://com.atos.slicesdemo/launchactivity";
+            String uri = "slice-content://com.example.slicesdemo/launchactivity";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             startActivity(intent);
 
@@ -108,7 +107,7 @@ public class LaunchActivity extends AppCompatActivity {
     private void launchSliceViewerAppToggle() {
 
         if (isSliceViewerInstalled() && isSliceViewerApplicationEnabled()) {
-            String uri = "slice-content://com.atos.slicesdemo/wifi";
+            String uri = "slice-content://com.example.slicesdemo/wifi";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             startActivity(intent);
 
@@ -119,7 +118,7 @@ public class LaunchActivity extends AppCompatActivity {
     private void launchSliceViewerAppGrid() {
 
         if (isSliceViewerInstalled() && isSliceViewerApplicationEnabled()) {
-            String uri = "slice-content://com.atos.slicesdemo/kotlin";
+            String uri = "slice-content://com.example.slicesdemo/kotlin";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             startActivity(intent);
 

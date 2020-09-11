@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LaunchActivity">
+        <activity android:name="com.atos.slicesdemo.LaunchActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +37,10 @@
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/action" />
+
         <provider
             android:name=".AppSliceProvider"
-            android:authorities="com.atos.slicesdemo"
+            android:authorities="com.example.slicesdemo"
             android:grantUriPermissions="true"
             android:exported="true">
             <intent-filter>
