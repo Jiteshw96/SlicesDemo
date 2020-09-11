@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">SlicesDemo</string>
 
-    <string name="slice_viewer_application_package_name">com.atos.android.sliceviewer</string>
+    <string name="slice_viewer_application_package_name">com.example.android.sliceviewer</string>
 </resources>
