@@ -2,13 +2,11 @@ package com.atos.slicesdemo;
 
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 
-import androidx.annotation.NonNull;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.slice.Slice;
 
@@ -30,7 +28,7 @@ public class AppSliceProvider extends SliceProvider {
     }
 
 
-    @NonNull
+   /* @NonNull
     @Override
     public Uri onMapIntentToUri(Intent intent) {
         Uri.Builder uriBuilder = new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT);
@@ -43,17 +41,18 @@ public class AppSliceProvider extends SliceProvider {
         return uriBuilder.build();
 
     }
-
+*/
 
     @Override
     public Slice onBindSlice(Uri sliceUri) {
 
+      // switch (sliceUri.getQueryParameter("name")) {
         switch (sliceUri.getPath()) {
-            case "/wifi":
+            case "wifi":
                 return createWifiToggleActionSlice(sliceUri);
             case "/kotlin":
                 return  createSliceGridRow(sliceUri);
-            case "/launchactivity":
+            case "launchactivity":
                 return createLaunchActivity(sliceUri);
             default:
                 return createLaunchActivity(sliceUri);
@@ -67,7 +66,8 @@ public class AppSliceProvider extends SliceProvider {
                 IconCompat.createWithResource(getContext(), R.drawable.ic_launcher_background),
                 "Launch MainActivity");
 
-        if (sliceUri.getPath().equals("/launchactivity")) {
+       if (sliceUri.getQueryParameter("name").equals("launchactivity")) {
+        //if (sliceUri.getPath().equals("/launchactivity")) {
             return new ListBuilder(getContext(), sliceUri, ListBuilder.INFINITY)
                     .addRow(new RowBuilder().setTitle("Launch Activity").setPrimaryAction(sliceAction)).build();
 

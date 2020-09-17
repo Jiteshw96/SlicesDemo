@@ -144,6 +144,9 @@ public class LaunchActivity extends AppCompatActivity {
     }
 
 
+
+
+
     private String getAssistantPackage(Context context){
         PackageManager packageManager = context.getPackageManager();
         List<ResolveInfo> resolveInfosList = packageManager.queryIntentServices(
